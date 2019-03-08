@@ -1,0 +1,25 @@
+<?php
+
+//2. Escreva um programa que leia a quantidade de dias, horas, minutos e segundos do usuário. Calcule o
+//total em segundos.
+print "digite \n";
+
+print "quantidade de dias : ";
+$dias = (int) fgets(STDIN);
+$Dseg = $dias * 86400;
+
+print "quantidadede horas :";
+$horas = (int) fgets(STDIN);
+$Hseg = $horas * 3600;
+
+print "Minutos : ";
+$minu = (int) fgets(STDIN);
+$Mseg = $minu *60;
+
+print "Segundos : ";
+$segundos = (int) fgets(STDIN);
+
+$segtotal = $Dseg + $Hseg+ $segundos + $Mseg;
+  
+  print "O total de segundos foi : $segtotal";
+
