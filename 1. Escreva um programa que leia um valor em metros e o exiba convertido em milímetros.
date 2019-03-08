@@ -1,10 +1,9 @@
 <?php
 
 print "digite o valor em metros :";
+$valorm = (int) fgets(STDIN);
 
-$valorm = int fgets (STDIN);
-
-$valormm = valorm/1000;
+$valormm =$valorm/1000;
 
 print "$valorm convertido em milimetros é = a $valormm";
-//=]
+
