@@ -1,0 +1,15 @@
+<?php
+
+//6. Converta uma temperatura digitada em Celsius para Fahrenheit. F = 9*C/5 + 32 .
+
+
+print "informe \n";
+
+print "A temperatura a ser convertida:\n ";
+$temperatura = (float) fgets(STDIN);
+
+$temperaturaF = 9*$temperatura/5+32;
+
+  
+  print "A temperatura convertida será : $temperaturaF final";
+
