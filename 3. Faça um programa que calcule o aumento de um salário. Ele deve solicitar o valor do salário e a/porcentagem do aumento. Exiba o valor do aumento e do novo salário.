@@ -2,3 +2,18 @@
 
 //3. Faça um programa que calcule o aumento de um salário. Ele deve solicitar o valor do salário e a
 //porcentagem do aumento. Exiba o valor do aumento e do novo salário.
+
+print "informe \n";
+
+print "valor do salario : ";
+$salarioI = (float) fgets(STDIN);
+
+print "porcentagem de aumento :";
+$porcentagem = (float) fgets(STDIN);
+
+$aumentoV = ($salarioI/100)*$porcentagem;
+
+$salarioF = $salarioI+$aumentoV ;
+  
+  print "O valor de aumento foi $aumentoV e seu novo salario será $salarioF";
+
