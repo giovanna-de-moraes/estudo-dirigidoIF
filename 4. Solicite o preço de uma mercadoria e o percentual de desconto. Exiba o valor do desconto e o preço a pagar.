@@ -1,0 +1,21 @@
+<?php
+
+
+//4. Solicite o preço de uma mercadoria e o percentual de desconto. Exiba o valor do desconto e o preço a
+//pagar.
+
+
+print "informe \n";
+
+print "Preço da mercadoria : ";
+$preco = (float) fgets(STDIN);
+
+print "Percentual de desconto :";
+$desconto = (float) fgets(STDIN);
+
+$descontoF = ($preco/100)*$desconto;
+
+$preconovo = $preco-$descontoF;
+  
+  print "O valor de desconto foi de $descontoF e o preço a pagar será de : $preconovo;";
+
