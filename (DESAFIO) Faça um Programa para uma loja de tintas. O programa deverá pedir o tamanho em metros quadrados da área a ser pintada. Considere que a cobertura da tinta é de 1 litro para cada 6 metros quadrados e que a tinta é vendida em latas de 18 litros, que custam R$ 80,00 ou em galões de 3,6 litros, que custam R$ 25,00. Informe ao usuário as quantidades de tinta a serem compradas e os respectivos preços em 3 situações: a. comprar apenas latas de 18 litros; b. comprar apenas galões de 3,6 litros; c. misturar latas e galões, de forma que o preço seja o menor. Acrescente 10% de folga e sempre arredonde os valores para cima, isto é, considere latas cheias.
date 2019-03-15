@@ -1,0 +1,47 @@
+<?php
+//9. (DESAFIO) Faça um Programa para uma loja de tintas. O programa deverá pedir o tamanho em metros
+//quadrados da área a ser pintada. Considere que a cobertura da tinta é de 1 litro para cada 6 metros
+//quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00 ou em galões de 3,6 litros,
+//que custam R$ 25,00. Informe ao usuário as quantidades de tinta a serem compradas e os respectivos
+//preços em 3 situações:
+
+ 
+print "Digite o tamanho da área a ser pintada em metros: ";
+$metros = (int) fgets(STDIN);
+print "Digite a forma de comprar o produto:
+    
+       [1] -> Comprar apenas latas de 18L
+       [2] -> Comprar apenas galões de 3,6L
+       [3] -> Misturar os dois para obter o melhor preço \n";
+
+       $situacao = (int) fgets(STDIN);
+
+//a. comprar apenas latas de 18 litros; 
+if ($situacao == 1) {
+ $ltotal = ceil($metros / 6);
+ $latastotais = ceil($ltotal / 18);
+ $precototal = round($latastotais * 80);
+ print "Irá ser preciso  $ltotal litros, totalizando $latastotais latas, o custo sera  R$$precototal,00 ";
+}
+//b. comprar apenas galões de 3,6 litros;
+if ($situacao == 2) {
+ $ltotal = ceil($metros / 6);
+ $totalgaloes = ceil($ltotal/ 3.6);
+ $precototal = round($totalgaloes * 25);
+    
+ print "Irá ser preciso $ltotal litros, sendo necessario $totalgaloes galões, o custo sera  R$$precototal,00 ";
+    
+}
+//c.misturar latas e galões, de forma que o preço seja o menor. Acrescente 10% de folga e sempre
+//arredonde os valores para cima, isto é, considere latas cheias.
+
+if ($situacao == 3){
+    // 10% 
+    $area = $metros + ($metros* 0.10);
+    $ltotal = ceil($area / 6);
+    $latastotais = ceil($ltotal/18);
+    $restoL = $latastotais%18;
+    $totalgaloes = ceil($restoL/3.6);
+    $precototal = ($latastotais * 80) + ($totalgaloes * 25);
+    print "Irá ser preciso $ltotal litros, latas de 18L e $totalgaloes galoes de 3.6L, o custo sera de R$$precototal,00";
+}
