@@ -1,0 +1,24 @@
+<?php
+
+//7. Escreva um programa que pergunte a quantidade de km percorridos por um carro alugado pelo usuário,
+//assim como a quantidade de dias pelos quais o carro foi alugado. Calcule o preço a pagar, sabendo que o
+//carro custa R$ 60,00 por dia e R$ 0,15 por km rodado.
+
+print "informe \n";
+
+print "Quantidade de km percorridos pelo carro alugado:\n ";
+$quantidade = (float) fgets(STDIN);
+
+
+print "Quantidade de dias que o carro foi augado:\n ";
+$dias = (int) fgets(STDIN);
+
+$precodia = $dias*60.00;
+$precokm =$quantidade*0.15;
+
+$precoF = $precodia+$precokm;
+
+
+  
+  print "O preço a pagar sera de $precoF";
+
